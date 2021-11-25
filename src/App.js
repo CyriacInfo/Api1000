@@ -1,5 +1,10 @@
+import Slider from "./compoments/Slider";
+
+
 function App() {
-  return <div className="App">Hello la team !</div>;
+  return (
+    <Slider />
+  );
 }
 
 export default App;

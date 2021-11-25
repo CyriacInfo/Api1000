@@ -1,7 +1,6 @@
 import React from "react";
-import "./RechercheStyle.css";
 
-export default function RechercheStyle() {
+export default function RechercheAnnee() {
   return (
     <div className="Titre_Stylerecherche">
       <h2>Rechercher un style</h2>

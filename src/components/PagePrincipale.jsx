@@ -2,6 +2,7 @@ import React from "react";
 import "./pagePrincipale.css";
 import RechercheStyle from "./RechercheStyle";
 import Slider from "./Slider";
+import RechercheAnnee from "./RechercheAnnee";
 
 export default function PagePrincipale() {
   return (
@@ -14,7 +15,7 @@ export default function PagePrincipale() {
       <Slider />
       <RechercheStyle />
       <button type="button">Aléatoire</button>
-      <div>PlayList par année</div>
+      <RechercheAnnee />
     </div>
   );
 }

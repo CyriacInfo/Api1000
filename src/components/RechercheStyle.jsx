@@ -4,7 +4,7 @@ import "./RechercheStyle.css";
 export default function RechercheStyle() {
   return (
     <div className="Titre_Stylerecherche">
-      <h2>Rechercher un style</h2>
+      <h2 className="Titre_Style">Rechercher un style</h2>
       <div className="section_Recherche_Style">
         <img
           src="https://www.webstickersmuraux.com/fr/img/asmu272-jpg/folder/products-listado-merchant/autocollants-rock-and-roll-homer-.jpg"

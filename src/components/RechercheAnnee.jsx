@@ -3,46 +3,36 @@ import React from "react";
 export default function RechercheAnnee() {
   return (
     <div className="Titre_Stylerecherche">
-      <h2>Rechercher un style</h2>
+      <h2 className="Titre_Style">Rechercher par année</h2>
       <div className="section_Recherche_Style">
         <img
-          src="https://www.webstickersmuraux.com/fr/img/asmu272-jpg/folder/products-listado-merchant/autocollants-rock-and-roll-homer-.jpg"
+          src="https://m.media-amazon.com/images/I/81DZAmAZFaL._SS500_.jpg"
           alt="styleRock"
           className="img-recherche-style"
         />
         <img
-          src="https://lh3.googleusercontent.com/proxy/OxAbzsvjBfmoxGiwQ32e0CiME19666Zj9eo38h5C_vOX9shdjIpIV9uEHCcLvNyIWxmqCrHZbRON_Nl6JZKrY_Pgw78ccTeBufNLBHPsGuVq-7l29FlXsRO_dWOWfMzXUGXGyyizgMP1YvtehD10yltyOp1N8Apc4NKQnB4o8lw0"
+          src="https://www.enmodebasque.com/wp-content/uploads/2018/07/Nostalgiques_des_ann%C3%A9es_80_o%C3%B9_aller_danser.jpg"
           alt="stylePop"
           className="img-recherche-style"
         />
         <img
-          src="https://img1.picmix.com/output/stamp/normal/0/3/2/6/1526230_acf0e.png"
+          src="https://m.media-amazon.com/images/I/71tG+68TK4L._SS500_.jpg"
           alt="styleJazz"
           className="img-recherche-style"
         />
         <img
-          src="https://www.ambiance-sticker.com/images/Image/sticker-musique-rap-et-casque-de-music-ambiance-sticker-KC10981.png"
+          src="https://passetoncasting.com/wp-content/uploads/2021/01/la_playlist_des_annees_2000-1.jpg"
           alt="styleRap"
           className="img-recherche-style"
         />
         <img
-          src="https://static.vecteezy.com/system/resources/previews/001/208/216/non_2x/music-genre-punk-png.png"
+          src="https://data.topquizz.com/distant/quizz/big/8/8/4/1/131488_eb284748f0.jpg"
           alt="stylePunk"
           className="img-recherche-style"
         />
         <img
-          src="https://i.pinimg.com/236x/ac/78/47/ac78470a638dbb100ef4b60207acf8ae--music-rock-music-music.jpg"
+          src="https://p7.storage.canalblog.com/70/07/715313/125592562.jpg"
           alt="styleMetal"
-          className="img-recherche-style"
-        />
-        <img
-          src="https://www.radio.fr/images/broadcasts/c9/62/106718/1/c300.png"
-          alt="styleHiphop"
-          className="img-recherche-style"
-        />
-        <img
-          src="https://m.media-amazon.com/images/I/41kaFbzlXxL.jpg"
-          alt="styleRnb"
           className="img-recherche-style"
         />
       </div>

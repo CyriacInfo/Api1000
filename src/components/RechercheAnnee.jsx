@@ -35,6 +35,16 @@ export default function RechercheAnnee() {
           alt="styleMetal"
           className="img-recherche-style"
         />
+        <img
+          src="https://lh3.googleusercontent.com/proxy/Kag2efaHyZITCyxH5hJubfPPcbuCKkv1M5LIrgD4vUHey4XbpTCI7Cdc8LL3F4iCic83f_gwzCRP6tcwC4Tv2qs5ugare2DOUnsY8UlB"
+          alt="styleMetal"
+          className="img-recherche-style"
+        />
+        <img
+          src="https://lh3.googleusercontent.com/proxy/Kag2efaHyZITCyxH5hJubfPPcbuCKkv1M5LIrgD4vUHey4XbpTCI7Cdc8LL3F4iCic83f_gwzCRP6tcwC4Tv2qs5ugare2DOUnsY8UlB"
+          alt="styleMetal"
+          className="img-recherche-style"
+        />
       </div>
     </div>
   );

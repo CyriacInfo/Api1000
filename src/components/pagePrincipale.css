@@ -23,6 +23,18 @@ body {
 
 
 @media only screen and (max-width: 800px) {
+
+  .ButtonBodyMain {
+    margin-bottom: 10px;
+  }
+
+  .BodyMain {
+    display: flow-root list-item;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
   .RechargeBar {
     width: 90%;
     height: 40px;
@@ -54,8 +66,8 @@ body {
 
   .ContainerSearchImg {
     position: relative;
-    top: 36px;
-    left: -84px;
+    top: 8px;
+    left: 35px;
     height: 26px;
   }
   
@@ -77,6 +89,12 @@ body {
 }
 
 @media only screen and (min-width: 801px) {
+  .BodyMain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   .RechargeBar {
     width: 421px;
     height: 50px;
@@ -128,12 +146,6 @@ body {
   
 }
 
-.BodyMain {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .BodyMain h1 {
   font-weight: 600;
   font-size: 3rem;
@@ -145,7 +157,6 @@ body {
 }
 
 .ButtonBodyMain {
-  position: absolute;
   width: 269px;
   height: 70px;
   left: 73px;
@@ -154,11 +165,6 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
-
-.TextMain {
-  display: inline;
-}
-
 
 .CarrousselMain {
   width: 50%;

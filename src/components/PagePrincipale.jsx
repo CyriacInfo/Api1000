@@ -1,7 +1,12 @@
-import "./App.css";
+import React from "react";
+import "./pagePrincipale.css";
+import RechercheStyle from "./RechercheStyle";
+import Slider from "./Slider";
 
-function App() {
-  return <div>
+export default function PagePrincipale() {
+  return (
+    <div>
+    <div>
     <div className="HeadMain">
       <img className="LogoMain" src="assets/Logo.png" alt="logo" />
       <div className="ContainerSearch">
@@ -15,6 +20,16 @@ function App() {
       <button className="ButtonMain"><img className="ButtonMainImg" src="assets/chevron-right.png" alt="logo" /></button>
     </div>
   </div>
-}
 
-export default App;
+      <div className="header">
+      <input className="searchbar" type="text"
+        name="search" placeholder="Search.."/>
+      </div>
+
+      <Slider />
+      <RechercheStyle />
+      <button type="button">Aléatoire</button>
+      <div>PlayList par année</div>
+    </div>
+  );
+}

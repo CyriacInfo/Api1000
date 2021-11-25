@@ -1,10 +1,8 @@
 import PagePrincipale from "./components/PagePrincipale";
-
+import "./App.css";
 
 function App() {
-  return (
-    <PagePrincipale />
-  )
+  return <PagePrincipale />;
 }
 
 export default App;

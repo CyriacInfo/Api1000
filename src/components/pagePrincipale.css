@@ -35,8 +35,8 @@ body {
 
   .ContainerSearchImg {
     position: relative;
-    top: 6px;
-    left: 34px;
+    top: 36px;
+    left: -84px;
     height: 26px;
   }
 }
@@ -56,10 +56,11 @@ body {
 
   .HeadMain {
     display: flex;
-    margin: 10px;
+    margin: 2rem;
     justify-content: space-between;
     align-items: center;
     margin-right: 60px;
+    margin-bottom: 20vh;
   }
 
   .ContainerSearch {
@@ -74,6 +75,19 @@ body {
 }
 
 .BodyMain {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.BodyMain h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.BodyMain h3 {
+  font-weight: 100;
+  font-size: 1.1rem;
 }
 
 .ButtonBodyMain {
@@ -84,4 +98,14 @@ body {
   top: 652px;
   background: #12bcd6;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.TextMain {
+  display: inline;
+}
+
+.CarrousselMain {
+  width: 50%;
+  height: calc(300px + 10rem);
 }

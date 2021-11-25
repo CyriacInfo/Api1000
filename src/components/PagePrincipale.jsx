@@ -45,7 +45,7 @@ export default function PagePrincipale() {
         </div>
       </div>
       <RechercheStyle />
-      <button type="button">Aléatoire</button>
+      <button className="button-aleatoir" type="button">Aléatoire</button>
       <RechercheAnnee />
     </div>
   );

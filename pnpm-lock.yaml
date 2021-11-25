@@ -9,6 +9,7 @@ specifiers:
   react-dom: ^17.0.2
   react-router-dom: ^6.0.2
   react-scripts: 4.0.3
+  uuid: ^8.3.2
   web-vitals: ^1.0.1
 
 dependencies:
@@ -20,6 +21,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   react-router-dom: 6.0.2_react-dom@17.0.2+react@17.0.2
   react-scripts: 4.0.3_react@17.0.2
+  uuid: 8.3.2
   web-vitals: 1.1.2
 
 packages:
@@ -11313,7 +11315,6 @@ packages:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
     dev: false
-    optional: true
 
   /v8-compile-cache/2.3.0:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}

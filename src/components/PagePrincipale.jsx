@@ -1,6 +1,7 @@
 import React from "react";
 import "./pagePrincipale.css";
 import RechercheStyle from "./RechercheStyle";
+import Slider from "./Slider";
 
 export default function PagePrincipale() {
   return (
@@ -10,7 +11,7 @@ export default function PagePrincipale() {
         name="search" placeholder="Search.."/>
       </div>
 
-      <div>Carrousel</div>
+      <Slider />
       <RechercheStyle />
       <button type="button">Aléatoire</button>
       <div>PlayList par année</div>

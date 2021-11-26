@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./pagePrincipale.css";
 import RechercheStyle from "./RechercheStyle";
 import Slider from "./Slider";
 import RechercheAnnee from "./RechercheAnnee";
 import Jeu from "./Jeu";
 
-export default function PagePrincipale({myItem ,setPlayListId}) {
+export default function PagePrincipale({ myItem, setPlayListId }) {
   const [goToGame, setGoToGame] = useState(true);
   return (
     <div>
@@ -42,18 +42,35 @@ export default function PagePrincipale({myItem ,setPlayListId}) {
             Commmencer
           </button>
         </div>
-        <div className= "CarrousselMain">
-        <Slider />
+        <div className="CarrousselMain">
+          <Slider />
         </div>
       </div>
-      
-      {goToGame ? (<><RechercheStyle setGoToGame={setGoToGame} setPlayListId={setPlayListId}/>
-      <button className="button-aleatoir" type="button">Aléatoire</button>
-      <RechercheAnnee /></>
+
+      {goToGame ? (
+        <>
+          <RechercheStyle
+            setGoToGame={setGoToGame}
+            setPlayListId={setPlayListId}
+          />
+          <button
+            className="button-aleatoir"
+            type="button"
+            onClick={() => {
+              setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
+              setGoToGame(false);
+            }}
+          >
+            Aléatoire
+          </button>
+          <RechercheAnnee
+            setGoToGame={setGoToGame}
+            setPlayListId={setPlayListId}
+          />
+        </>
       ) : (
-        <Jeu setGoToGame={setGoToGame}myItem={myItem} />
+        <Jeu setGoToGame={setGoToGame} myItem={myItem} />
       )}
-      
     </div>
   );
 }

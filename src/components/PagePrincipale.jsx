@@ -1,12 +1,32 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./pagePrincipale.css";
 import RechercheStyle from "./RechercheStyle";
 import Slider from "./Slider";
 import RechercheAnnee from "./RechercheAnnee";
 import Jeu from "./Jeu";
 
-export default function PagePrincipale({myItem ,setPlayListId}) {
+export default function PagePrincipale() {
+  const [playList, setPlayListList] = useState([]);
+  const [searchId, setSearchId] = useState("");
+  const [playListID, setPlayListId] = useState("");
+  const [myItem, setMyItem] = useState({});
   const [goToGame, setGoToGame] = useState(true);
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playListID}&key=AIzaSyD-FWZXxe1RVKRUZRouRY2zVM3a9u_MeXY&maxResults=50`
+      )
+      .then((res) => {
+        setPlayListList(res.data);
+        setMyItem(randomId(res.data.items));
+      });
+  }, [playListID]);
+
+  const randomId = (element) => {
+    const numberResults = element[Math.floor(Math.random() * element.length)];
+    return numberResults;
+  };
   return (
     <div>
       <div>
@@ -42,18 +62,25 @@ export default function PagePrincipale({myItem ,setPlayListId}) {
             Commmencer
           </button>
         </div>
-        <div className= "CarrousselMain">
-        <Slider />
+        <div className="CarrousselMain">
+          <Slider />
         </div>
       </div>
-      
-      {goToGame ? (<><RechercheStyle setGoToGame={setGoToGame} setPlayListId={setPlayListId}/>
-      <button className="button-aleatoir" type="button">Aléatoire</button>
-      <RechercheAnnee /></>
+
+      {goToGame ? (
+        <>
+          <RechercheStyle
+            setGoToGame={setGoToGame}
+            setPlayListId={setPlayListId}
+          />
+          <button className="button-aleatoir" type="button">
+            Aléatoire
+          </button>
+          <RechercheAnnee />
+        </>
       ) : (
-        <Jeu setGoToGame={setGoToGame}myItem={myItem} />
+        <Jeu setGoToGame={setGoToGame} myItem={myItem} />
       )}
-      
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
 import "./pagePrincipale.css";
+import "./Animation.css"
 import RechercheStyle from "./RechercheStyle";
 import Slider from "./Slider";
 import RechercheAnnee from "./RechercheAnnee";
@@ -59,39 +59,39 @@ export default function PagePrincipale() {
         <>
           <div className="BodyMain">
             <div className="TextMain">
-              <h1>Bienvenue sur Apiquiz.</h1>
-              <h3>Reprenez goût à la musique.</h3>
-              <button className="ButtonBodyMain" type="button">
-                Commmencer
+              <h1>Bienvenue sur <span className="SpanAnimationMain1">Apiquiz.</span></h1>
+              <h3><span className="SpanAnimationMain2">Reprenez goût à la musique.</span></h3>
+              <button className="ButtonBodyMain" type ="button">
+              Commmencer
               </button>
-            </div>
-            <div className="CarrousselMain">
+              </div>
+              <div className="CarrousselMain">
               <Slider />
+              </div>
             </div>
-          </div>
 
-          <RechercheStyle
-            setGoToGame={setGoToGame}
-            setPlayListId={setPlayListId}
-          />
-          <button
-            className="button-aleatoir"
-            type="button"
-            onClick={() => {
-              setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
-              setGoToGame(false);
-            }}
-          >
-            Aléatoire
-          </button>
-          <RechercheAnnee
-            setGoToGame={setGoToGame}
-            setPlayListId={setPlayListId}
-          />
-        </>
-      ) : (
-        <Jeu setGoToGame={setGoToGame} myItem={myItem} />
+            <RechercheStyle
+              setGoToGame={setGoToGame}
+              setPlayListId={setPlayListId}
+            />
+            <button
+              className="button-aleatoir"
+              type="button"
+              onClick={() => {
+                setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
+                setGoToGame(false);
+              }}
+            >
+              Aléatoire
+            </button>
+            <RechercheAnnee
+              setGoToGame={setGoToGame}
+              setPlayListId={setPlayListId}
+            />
+          </>
+          ) : (
+          <Jeu setGoToGame={setGoToGame} myItem={myItem} />
       )}
-    </div>
-  );
+        </div>
+      );
 }

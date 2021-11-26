@@ -61,7 +61,14 @@ export default function PagePrincipale() {
             <div className="TextMain">
               <h1>Bienvenue sur Apiquiz.</h1>
               <h3>Reprenez goût à la musique.</h3>
-              <button className="ButtonBodyMain" type="button">
+              <button
+                className="ButtonBodyMain"
+                type="button"
+                onClick={() => {
+                  setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
+                  setGoToGame(false);
+                }}
+              >
                 Commmencer
               </button>
             </div>

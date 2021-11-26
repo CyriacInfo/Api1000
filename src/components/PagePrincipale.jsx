@@ -81,16 +81,7 @@ export default function PagePrincipale() {
             setGoToGame={setGoToGame}
             setPlayListId={setPlayListId}
           />
-          <button
-            className="button-aleatoir"
-            type="button"
-            onClick={() => {
-              setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
-              setGoToGame(false);
-            }}
-          >
-            Aléatoire
-          </button>
+
           <RechercheAnnee
             setGoToGame={setGoToGame}
             setPlayListId={setPlayListId}

@@ -55,21 +55,21 @@ export default function PagePrincipale() {
           </div>
         </div>
       </div>
-      <div className="BodyMain">
-        <div className="TextMain">
-          <h1>Bienvenue sur Apiquiz.</h1>
-          <h3>Reprenez goût à la musique.</h3>
-          <button className="ButtonBodyMain" type="button">
-            Commmencer
-          </button>
-        </div>
-        <div className="CarrousselMain">
-          <Slider />
-        </div>
-      </div>
-
       {goToGame ? (
         <>
+          <div className="BodyMain">
+            <div className="TextMain">
+              <h1>Bienvenue sur Apiquiz.</h1>
+              <h3>Reprenez goût à la musique.</h3>
+              <button className="ButtonBodyMain" type="button">
+                Commmencer
+              </button>
+            </div>
+            <div className="CarrousselMain">
+              <Slider />
+            </div>
+          </div>
+
           <RechercheStyle
             setGoToGame={setGoToGame}
             setPlayListId={setPlayListId}

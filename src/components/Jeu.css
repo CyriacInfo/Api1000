@@ -49,17 +49,17 @@
   border-radius: 30px;
   justify-content: space-between;
   border: solid 1px black;
-  overflow: hidden;
   background-color: white;
 }
 
 .timer {
-  width: 50px;
+  width: 100px;
   height: 50px;
   border: solid black 1px;
   margin: 10px 40px;
   background-color: black;
   padding: auto;
+  color: white;
 }
 
 .points {
@@ -82,4 +82,15 @@
   width: 46%;
   padding-top: 1%;
   border-radius: 61px;
+}
+
+.inputFeild {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 5vh;
+}
+
+.inpute {
+width: 3vw;
 }

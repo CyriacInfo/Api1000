@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./pagePrincipale.css";
 import RechercheStyle from "./RechercheStyle";
 import Slider from "./Slider";
 import RechercheAnnee from "./RechercheAnnee";
+import Jeu from "./Jeu";
 
-export default function PagePrincipale() {
+export default function PagePrincipale({myItem ,setPlayListId}) {
+  const [goToGame, setGoToGame] = useState(true);
   return (
     <div>
       <div>
@@ -44,9 +46,14 @@ export default function PagePrincipale() {
         <Slider />
         </div>
       </div>
-      <RechercheStyle />
+      
+      {goToGame ? (<><RechercheStyle setGoToGame={setGoToGame} setPlayListId={setPlayListId}/>
       <button className="button-aleatoir" type="button">Aléatoire</button>
-      <RechercheAnnee />
+      <RechercheAnnee /></>
+      ) : (
+        <Jeu setGoToGame={setGoToGame}myItem={myItem} />
+      )}
+      
     </div>
   );
 }

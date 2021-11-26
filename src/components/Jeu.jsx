@@ -10,8 +10,7 @@ export default function Jeu({ setGoToGame, myItem }) {
   const [loadingGame, setLoadingGame] = useState(false);
   const [startBlindTest, setStartBlindTest] = useState(false);
   const [paramsGame, setParamsGame] = useState("start");
-  const [myArtist, setMyArtist] = useState("ACDC");
-  const [myTitle, setMyTitle] = useState("thunderstruck");
+  const [stringResult, setStringResult] = useState("");
   const [myLives, setMyLives] = useState(3);
   const [myImg, setMyImg] = useState("");
 
@@ -20,26 +19,30 @@ export default function Jeu({ setGoToGame, myItem }) {
       setLoadingGame(true);
       setStartBlindTest(true);
       setMyLives(3);
+
+      if (myItem) {
+        setStringResult(myItem.snippet.title);
+      }
     }, 3000);
 
     setTimeout(function () {
       setStartBlindTest(false);
+      if (myItem) {
+        setMyImg(myItem.snippet.thumbnails.medium.url);
+      }
     }, 33000);
-  }, []);
+  }, [myItem]);
 
   const askResult = () => {
-    if (
-      inputSolution === myTitle ||
-      inputSolution === myArtist ||
-      inputSolution === `${myArtist} ${myTitle}` ||
-      inputSolution === `${myTitle} ${myArtist}`
-    ) {
-      setParamsGame("winner");
-    } else {
-      setMyLives(myLives - 1);
-    }
-    if (myLives === 1) {
-      setParamsGame("Looser");
+    if (inputSolution !== " " && inputSolution !== "") {
+      if (stringResult.toLowerCase().includes(inputSolution.toLowerCase())) {
+        setParamsGame("winner");
+      } else {
+        setMyLives(myLives - 1);
+        if (myLives - 1 === 0) {
+          setParamsGame("Looser");
+        }
+      }
     }
   };
 
@@ -69,20 +72,19 @@ export default function Jeu({ setGoToGame, myItem }) {
 
               <img
                 className="img1"
-                src="https://lh3.googleusercontent.com/proxy/KcrhzBIriRgW86g8VaEIHzab9YYkVmrsMVzG1XZtwnvw7w-QMj0ldT7lLQvSSeleUVwNZQxVVXpn4bEfNZdThBgqfBGFmXm1Dov_332yaGCKFg3-O6rNIiRcJlZNozuV-BcIGxmcEyChlB3njTKW5FIdCLtubYSGObhTPR58rYzvPy8r7hm5ODFzdUezFCj2njp3J9JiUjPLFxOpht-SqSxugqOI55z3MBFGmLqADDqHjY5-BA60QCg3fiBGNBApuy53LTTXDCVVoHW8Q-pHXbgvy_PDfg1IiZSOSlnelYKPMCC1dWTb4lKjwR8TIE4kgfN3NKeTGEJJNR_PB1fqcbZT7yuq4Ef1zb9oflXqLqYhwfXxr0URIsrEGrSqZX7N6cQdh25xWw"
-                alt=""
-              />
-              {/* <img
-                className="img1"
                 src={
                   startBlindTest
                     ? "https://lh3.googleusercontent.com/proxy/KcrhzBIriRgW86g8VaEIHzab9YYkVmrsMVzG1XZtwnvw7w-QMj0ldT7lLQvSSeleUVwNZQxVVXpn4bEfNZdThBgqfBGFmXm1Dov_332yaGCKFg3-O6rNIiRcJlZNozuV-BcIGxmcEyChlB3njTKW5FIdCLtubYSGObhTPR58rYzvPy8r7hm5ODFzdUezFCj2njp3J9JiUjPLFxOpht-SqSxugqOI55z3MBFGmLqADDqHjY5-BA60QCg3fiBGNBApuy53LTTXDCVVoHW8Q-pHXbgvy_PDfg1IiZSOSlnelYKPMCC1dWTb4lKjwR8TIE4kgfN3NKeTGEJJNR_PB1fqcbZT7yuq4Ef1zb9oflXqLqYhwfXxr0URIsrEGrSqZX7N6cQdh25xWw"
                     : myImg
                 }
-                alt=""
-              /> */}
+                alt="coucou"
+              />
 
-              <div className="titre_jeu">Devine l'artiste</div>
+              <div className="titre_jeu">
+                {paramsGame === "winner" || paramsGame === "Looser"
+                  ? stringResult
+                  : "Devine l'artiste"}
+              </div>
               <div className="inputFeild">
                 <input
                   type="text"
@@ -104,7 +106,11 @@ export default function Jeu({ setGoToGame, myItem }) {
             playing={startBlindTest ? true : false}
             width="0px"
             height="0px"
-            url={`https://www.youtube.com/watch?v=${myItem.snippet.resourceId.videoId}`}
+            url={
+              myItem.snippet.resourceId.videoId !== ""
+                ? `https://www.youtube.com/watch?v=${myItem.snippet.resourceId.videoId}`
+                : `https://www.youtube.com/watch?v=${myItem.id.videoId}`
+            }
           />
         </>
       ) : (

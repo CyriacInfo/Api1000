@@ -1,9 +1,6 @@
 .container_button {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  display: ruby-text-container;
   margin: 40px 10px 0px 250px;
-  width: 80vw;
 }
 
 .Fermer_le_jeu {
@@ -12,11 +9,11 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   margin: 0 20px;
   color: white;
-  background-color: turquoise;
+  background-color: #12bcd6;
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 2px rgb(144, 144, 144);
@@ -33,7 +30,7 @@
 .block_jeu {
   display: flex;
   align-items: center;
-  background-color: grey;
+  background-color: rgba(1, 185, 209, 0.822);
   height: 57vh;
   width: 80vw;
   margin: 10px auto;

@@ -49,7 +49,6 @@ export default function Jeu({ setGoToGame, myItem }) {
                 onChange={(e) => setInputSolution(e.target.value)}
               />
             </div>
-
             <div className="carre1"></div>
             <div className="carre2"></div>
             <div className="carre3"></div>

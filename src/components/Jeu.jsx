@@ -16,7 +16,7 @@ export default function Jeu({ setGoToGame, myItem }) {
     setTimeout(function () {
       setLoadingGame(true);
       setStartBlindTest(true);
-      C(3);
+      setMyLives(3);
     }, 3000);
     setTimeout(function () {
       setStartBlindTest(false);

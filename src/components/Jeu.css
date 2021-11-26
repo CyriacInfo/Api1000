@@ -1,5 +1,4 @@
-
-.container_button{
+.container_button {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -7,7 +6,7 @@
   width: 80vw;
 }
 
-.Fermer_le_jeu{
+.Fermer_le_jeu {
   font-size: x-large;
   display: flex;
   justify-content: center;
@@ -24,25 +23,25 @@
   cursor: pointer;
 }
 
-.Nom_fermer_le_jeu{
+.Nom_fermer_le_jeu {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.block_jeu{
+.block_jeu {
   display: flex;
   align-items: center;
-  border: solid 3px black;
-  height: 20vh;
+  background-color: grey;
+  height: 57vh;
   width: 80vw;
-  margin:  10px auto;
+  margin: 10px auto;
   border-radius: 30px;
   flex-direction: column;
 }
 
-.info_jeu{
+.info_jeu {
   display: flex;
   flex-direction: row;
   width: 80vw;
@@ -51,26 +50,36 @@
   justify-content: space-between;
   border: solid 1px black;
   overflow: hidden;
+  background-color: white;
 }
 
-.timer{
+.timer {
   width: 50px;
   height: 50px;
   border: solid black 1px;
-  margin:  10px 40px;
+  margin: 10px 40px;
   background-color: black;
   padding: auto;
 }
 
-.points{
+.points {
   width: 50px;
   height: 50px;
   background-color: black;
   margin: 10px 40px;
 }
 
-.container_jeu{
+.container_jeu {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 80vw;
-  height: 10vh;
+  height: 100%;
+  justify-content: center;
+}
+
+.img1 {
+  width: 46%;
+  padding-top: 1%;
+  border-radius: 61px;
 }

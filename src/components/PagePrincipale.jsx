@@ -11,10 +11,12 @@ export default function PagePrincipale() {
   const [playList, setPlayListList] = useState([]);
   const [searchId, setSearchId] = useState("");
   const [playListID, setPlayListId] = useState("");
-  const [myItem, setMyItem] = useState({});
+  const [myItem, setMyItem] = useState();
   const [goToGame, setGoToGame] = useState(true);
+  const [mySearch, setMySearch] = useState("")
   useEffect(() => {
-    axios
+    if(mySearch === ""){
+      axios
       .get(
         `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playListID}&key=AIzaSyD-FWZXxe1RVKRUZRouRY2zVM3a9u_MeXY&maxResults=50`
       )
@@ -22,7 +24,19 @@ export default function PagePrincipale() {
         setPlayListList(res.data);
         setMyItem(randomId(res.data.items));
       });
-  }, [playListID]);
+    }else if (playListID === ""){
+    axios
+      .get(
+        `https://www.googleapis.com/youtube/v3/search?search=${mySearch}list&key=AIzaSyD-FWZXxe1RVKRUZRouRY2zVM3a9u_MeXY&part=snippet`
+      )
+      .then((res) => {
+        setPlayListList(res.data);
+        setMyItem(randomId(res.data.items));
+      });
+
+    }
+    
+  }, [playListID, mySearch]);
 
   const randomId = (element) => {
     const numberResults = element[Math.floor(Math.random() * element.length)];
@@ -51,6 +65,9 @@ export default function PagePrincipale() {
               name="q"
               aria-label="Search through site content"
               placeholder="Rechercher"
+              value={mySearch}
+              onChange={(e)=> setMySearch(e.target.value)
+              }
             />
           </div>
         </div>

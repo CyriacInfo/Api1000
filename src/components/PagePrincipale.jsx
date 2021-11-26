@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+
 import "./pagePrincipale.css";
 import RechercheStyle from "./RechercheStyle";
 import Slider from "./Slider";
@@ -73,10 +74,20 @@ export default function PagePrincipale() {
             setGoToGame={setGoToGame}
             setPlayListId={setPlayListId}
           />
-          <button className="button-aleatoir" type="button">
+          <button
+            className="button-aleatoir"
+            type="button"
+            onClick={() => {
+              setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
+              setGoToGame(false);
+            }}
+          >
             Aléatoire
           </button>
-          <RechercheAnnee />
+          <RechercheAnnee
+            setGoToGame={setGoToGame}
+            setPlayListId={setPlayListId}
+          />
         </>
       ) : (
         <Jeu setGoToGame={setGoToGame} myItem={myItem} />

@@ -13,6 +13,7 @@ export default function Jeu({ setGoToGame, myItem }) {
   const [myArtist, setMyArtist] = useState("ACDC");
   const [myTitle, setMyTitle] = useState("thunderstruck");
   const [myLives, setMyLives] = useState(3);
+  const [myImg, setMyImg] = useState("");
 
   useEffect(() => {
     setTimeout(function () {
@@ -20,21 +21,27 @@ export default function Jeu({ setGoToGame, myItem }) {
       setStartBlindTest(true);
       setMyLives(3);
     }, 3000);
+
     setTimeout(function () {
       setStartBlindTest(false);
     }, 33000);
   }, []);
 
   const askResult = () => {
-    if(inputSolution === myTitle || inputSolution === myArtist || inputSolution === `${myArtist} ${myTitle}`|| inputSolution === `${myTitle} ${myArtist}` ){
+    if (
+      inputSolution === myTitle ||
+      inputSolution === myArtist ||
+      inputSolution === `${myArtist} ${myTitle}` ||
+      inputSolution === `${myTitle} ${myArtist}`
+    ) {
       setParamsGame("winner");
-    }else{
-      setMyLives(myLives - 1)
+    } else {
+      setMyLives(myLives - 1);
     }
-    if(myLives === 1) {
-      setParamsGame("Looser")
+    if (myLives === 1) {
+      setParamsGame("Looser");
     }
-  }
+  };
 
   return (
     <div>
@@ -65,22 +72,34 @@ export default function Jeu({ setGoToGame, myItem }) {
                 src="https://lh3.googleusercontent.com/proxy/KcrhzBIriRgW86g8VaEIHzab9YYkVmrsMVzG1XZtwnvw7w-QMj0ldT7lLQvSSeleUVwNZQxVVXpn4bEfNZdThBgqfBGFmXm1Dov_332yaGCKFg3-O6rNIiRcJlZNozuV-BcIGxmcEyChlB3njTKW5FIdCLtubYSGObhTPR58rYzvPy8r7hm5ODFzdUezFCj2njp3J9JiUjPLFxOpht-SqSxugqOI55z3MBFGmLqADDqHjY5-BA60QCg3fiBGNBApuy53LTTXDCVVoHW8Q-pHXbgvy_PDfg1IiZSOSlnelYKPMCC1dWTb4lKjwR8TIE4kgfN3NKeTGEJJNR_PB1fqcbZT7yuq4Ef1zb9oflXqLqYhwfXxr0URIsrEGrSqZX7N6cQdh25xWw"
                 alt=""
               />
+              {/* <img
+                className="img1"
+                src={
+                  startBlindTest
+                    ? "https://lh3.googleusercontent.com/proxy/KcrhzBIriRgW86g8VaEIHzab9YYkVmrsMVzG1XZtwnvw7w-QMj0ldT7lLQvSSeleUVwNZQxVVXpn4bEfNZdThBgqfBGFmXm1Dov_332yaGCKFg3-O6rNIiRcJlZNozuV-BcIGxmcEyChlB3njTKW5FIdCLtubYSGObhTPR58rYzvPy8r7hm5ODFzdUezFCj2njp3J9JiUjPLFxOpht-SqSxugqOI55z3MBFGmLqADDqHjY5-BA60QCg3fiBGNBApuy53LTTXDCVVoHW8Q-pHXbgvy_PDfg1IiZSOSlnelYKPMCC1dWTb4lKjwR8TIE4kgfN3NKeTGEJJNR_PB1fqcbZT7yuq4Ef1zb9oflXqLqYhwfXxr0URIsrEGrSqZX7N6cQdh25xWw"
+                    : myImg
+                }
+                alt=""
+              /> */}
 
               <div className="titre_jeu">Devine l'artiste</div>
               <div className="inputFeild">
                 <input
                   type="text"
                   value={inputSolution}
-                  onChange={(e) => setInputSolution(e.target.value)
-                    
-                  }
+                  onChange={(e) => setInputSolution(e.target.value)}
                 />
-                <input type="button" className="inpute" value="valider" onClick={askResult} />
+                <input
+                  type="button"
+                  className="inpute"
+                  value="valider"
+                  onClick={askResult}
+                />
               </div>
             </div>
           </div>
-          {paramsGame === "winner" ? <Win/> : null}
-          {paramsGame === "Looser" ? <Loose/> : null}
+          {paramsGame === "winner" ? <Win /> : null}
+          {paramsGame === "Looser" ? <Loose /> : null}
           <ReactPlayer
             playing={startBlindTest ? true : false}
             width="0px"

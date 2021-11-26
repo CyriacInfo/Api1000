@@ -1,6 +1,6 @@
 .container_button {
-  display: ruby-text-container;
-  margin: 40px 10px 0px 250px;
+  display: flex;
+  align-items: center;
 }
 
 .Fermer_le_jeu {
@@ -92,5 +92,13 @@
 }
 
 .inpute {
-  width: 3vw;
+  width: 10%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: grey 5px 5px 10px 0.5px;
+  cursor: pointer;
+  background-color: #12bcd6;
+  font-size: large;
+  border: 0px;
+  color: white;
 }

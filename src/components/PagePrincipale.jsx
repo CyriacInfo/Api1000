@@ -61,7 +61,14 @@ export default function PagePrincipale() {
             <div className="TextMain">
               <h1>Bienvenue sur Apiquiz.</h1>
               <h3>Reprenez goût à la musique.</h3>
-              <button className="ButtonBodyMain" type="button">
+              <button
+                className="ButtonBodyMain"
+                type="button"
+                onClick={() => {
+                  setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
+                  setGoToGame(false);
+                }}
+              >
                 Commmencer
               </button>
             </div>
@@ -74,16 +81,7 @@ export default function PagePrincipale() {
             setGoToGame={setGoToGame}
             setPlayListId={setPlayListId}
           />
-          <button
-            className="button-aleatoir"
-            type="button"
-            onClick={() => {
-              setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
-              setGoToGame(false);
-            }}
-          >
-            Aléatoire
-          </button>
+
           <RechercheAnnee
             setGoToGame={setGoToGame}
             setPlayListId={setPlayListId}

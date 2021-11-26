@@ -1,0 +1,39 @@
+/* @media only screen and (max-width: 99999999px) {
+      
+      div:first-of-type .SpanAnimationMain2{   
+        animation: showup 7s;
+      }
+      
+      div:last-of-type .SpanAnimationMain1{
+        width:0px;
+        animation: reveal 7s;
+      }
+      
+      div:last-of-type .SpanAnimationMain1 {
+        margin-left:-355px;
+        animation: slidein 7s;
+      }
+      
+      @keyframes showup {
+          0% {opacity:0;}
+          20% {opacity:1;}
+          80% {opacity:1;}
+          100% {opacity:0;}
+      }
+      
+      @keyframes slidein {
+          0% { margin-left:-800px; }
+          20% { margin-left:-800px; }
+          35% { margin-left:0px; }
+          100% { margin-left:0px; }
+      }
+      
+      @keyframes reveal {
+          0% {opacity:0;width:0px;}
+          20% {opacity:1;width:0px;}
+          30% {width:355px;}
+          80% {opacity:1;}
+          100% {opacity:0;width:355px;}
+      }
+      
+} */

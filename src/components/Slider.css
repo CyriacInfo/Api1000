@@ -1,0 +1,124 @@
+@media only screen and (max-width: 800px) {
+  .slide img {
+    width: 1242%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    text-align: center;
+    position: absolute;
+  }
+
+  .slide {
+    width: 7.5%;
+    height: calc(300px + 10rem);
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+  }
+
+  .container-slider {
+    max-width: 188%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 53vh;
+}
+
+.container-dots {
+  position: absolute;
+  bottom: -244px;
+  left: 52%;
+  transform: translateX(-52%);
+  display: flex;
+}
+}
+
+@media only screen and (min-width: 800px) {
+  .slide img {
+    width: 673%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .slide {
+    width: 7.5%;
+    height: calc(300px + 10rem);
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+  }
+
+  .container-slider {
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: right;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .container-dots {
+    position: relative;
+    bottom: -428px;
+    left: 90%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+}
+
+.active-anim {
+  opacity: 1;
+}
+
+.btn-slide {
+  width: 60px;
+  border: 1px solid rgba(34, 34, 34, 0.287);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px 0.1px black;
+  transition: all 0.2s ease-in-out;
+  width: 49.55px;
+  height: 49.55px;
+  left: 1259px;
+  top: 223px;
+  background: #12bcd6;
+  border-radius: 10px;
+}
+.btn-slide:hover {
+  background: hsl(172, 52%, 50%);
+}
+
+.btn-slide img {
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+}
+.prev {
+  top: 29%;
+  left: 82%;
+  transform: translateY(-60%);
+}
+.next {
+  top: 29%;
+  left: 93%;
+  transform: translateY(-60%);
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  margin: 0 5px;
+  background: #f1f1f1;
+}
+.dot.active {
+  background: rgb(32, 32, 32);
+}

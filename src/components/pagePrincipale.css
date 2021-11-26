@@ -4,6 +4,20 @@ body {
   justify-content: center;
 }
 
+.Win {
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  height: 10%;
+}
+
+.Loose {
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  height: 10%;
+}
+
 .button-aleatoir {
   display: flex;
   margin: 10px auto;
@@ -19,6 +33,7 @@ body {
   color: white;
   text-shadow: 2px 2px 2px black;
   font-size: large;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {

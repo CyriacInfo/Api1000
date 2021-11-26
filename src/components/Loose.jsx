@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./pagePrincipale.css";
 
 function Loose() {
   return (
-    <div>
+    <div className="Loose">
       {`Ohhh you loose all of your lives, try again !`}
     </div>
-  )
+  );
 }
 
-export default Loose
+export default Loose;

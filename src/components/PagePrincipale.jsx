@@ -51,7 +51,7 @@ export default function PagePrincipale({myItem ,setPlayListId}) {
       <button className="button-aleatoir" type="button">Aléatoire</button>
       <RechercheAnnee /></>
       ) : (
-        <Jeu myItem={myItem} />
+        <Jeu setGoToGame={setGoToGame}myItem={myItem} />
       )}
       
     </div>

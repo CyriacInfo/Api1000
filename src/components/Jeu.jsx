@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./Jeu.css";
 
-export default function Jeu() {
+export default function Jeu({setGoToGame}) {
   const [inputSolution, setInputSolution] = useState("");
   return (
     <div>
       <div className="container_button">
-        <button className="Fermer_le_jeu" type="button">
+        <button className="Fermer_le_jeu" type="button" onClick={()=>setGoToGame(true)}>
           X
         </button>
         <h2 className="Nom_fermer_le_jeu">Quitter</h2>

@@ -17,7 +17,7 @@ export default function RechercheStyle({ setPlayListId, setGoToGame }) {
           src="https://lh3.googleusercontent.com/proxy/OxAbzsvjBfmoxGiwQ32e0CiME19666Zj9eo38h5C_vOX9shdjIpIV9uEHCcLvNyIWxmqCrHZbRON_Nl6JZKrY_Pgw78ccTeBufNLBHPsGuVq-7l29FlXsRO_dWOWfMzXUGXGyyizgMP1YvtehD10yltyOp1N8Apc4NKQnB4o8lw0"
           alt="stylePop"
           className="img-recherche-style"
-          onClick={() => {setPlayListId("PLNxOe-buLm6cz8UQ-hyG1nm3RTNBUBv3K")
+          onClick={() => {setPlayListId("PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj")
           setGoToGame(false)}}
         />
         <img

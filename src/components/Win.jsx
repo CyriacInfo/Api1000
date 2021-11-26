@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import "./pagePrincipale.css";
 
 function Win() {
-  return (
-    <div>
-      {`Congratulation !!! You dit it :)`}
-    </div>
-  )
+  return <div className="Win">{`Congratulation !!! You dit it :)`}</div>;
 }
 
-export default Win
+export default Win;

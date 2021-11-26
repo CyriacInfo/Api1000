@@ -97,9 +97,10 @@ export default function Jeu({ setGoToGame, myItem }) {
                 />
               </div>
             </div>
+            {paramsGame === "winner" ? <Win /> : null}
+            {paramsGame === "Looser" ? <Loose /> : null}
           </div>
-          {paramsGame === "winner" ? <Win /> : null}
-          {paramsGame === "Looser" ? <Loose /> : null}
+
           <ReactPlayer
             playing={startBlindTest ? true : false}
             width="0px"

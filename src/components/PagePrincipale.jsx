@@ -63,13 +63,23 @@ export default function PagePrincipale() {
               <h3><span className="SpanAnimationMain2">Reprenez goût à la musique.</span></h3>
               <button className="ButtonBodyMain" type ="button">
               Commmencer
+              <h1>Bienvenue sur Apiquiz.</h1>
+              <h3>Reprenez goût à la musique.</h3>
+              <button
+                className="ButtonBodyMain"
+                type="button"
+                onClick={() => {
+                  setPlayListId("PLjwbNj9NASKNvYvRJruAA_IxAHLdbYVmN");
+                  setGoToGame(false);
+                }}
+              >
+                Commmencer
               </button>
               </div>
               <div className="CarrousselMain">
               <Slider />
               </div>
             </div>
-
             <RechercheStyle
               setGoToGame={setGoToGame}
               setPlayListId={setPlayListId}
@@ -91,6 +101,18 @@ export default function PagePrincipale() {
           </>
           ) : (
           <Jeu setGoToGame={setGoToGame} myItem={myItem} />
+          <RechercheStyle
+            setGoToGame={setGoToGame}
+            setPlayListId={setPlayListId}
+          />
+
+          <RechercheAnnee
+            setGoToGame={setGoToGame}
+            setPlayListId={setPlayListId}
+          />
+        </>
+      ) : (
+        <Jeu setGoToGame={setGoToGame} myItem={myItem} />
       )}
         </div>
       );

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import Timer from "./Timer";
+import Win from "./Win";
+import Loose from "./Loose";
 import "./Jeu.css";
 
 export default function Jeu({ setGoToGame, myItem }) {
@@ -8,8 +10,8 @@ export default function Jeu({ setGoToGame, myItem }) {
   const [loadingGame, setLoadingGame] = useState(false);
   const [startBlindTest, setStartBlindTest] = useState(false);
   const [paramsGame, setParamsGame] = useState("start");
-  const [myArtist, setMyArtist] = useState("");
-  const [myTitle, setMyTitle] = useState("");
+  const [myArtist, setMyArtist] = useState("ACDC");
+  const [myTitle, setMyTitle] = useState("thunderstruck");
   const [myLives, setMyLives] = useState(3);
 
   useEffect(() => {
@@ -29,7 +31,7 @@ export default function Jeu({ setGoToGame, myItem }) {
     }else{
       setMyLives(myLives - 1)
     }
-    if(myLives === 0) {
+    if(myLives === 1) {
       setParamsGame("Looser")
     }
   }
@@ -53,7 +55,7 @@ export default function Jeu({ setGoToGame, myItem }) {
               <div className="timer">
                 <Timer number={30} />
               </div>
-              <div className="points"></div>
+              <div className="points">PV: {myLives}</div>
             </div>
             <div className="container_jeu">
               <div className="jeux"></div>
@@ -69,12 +71,16 @@ export default function Jeu({ setGoToGame, myItem }) {
                 <input
                   type="text"
                   value={inputSolution}
-                  onChange={(e) => setInputSolution(e.target.value)}
+                  onChange={(e) => setInputSolution(e.target.value)
+                    
+                  }
                 />
-                <input type="button" className="inpute" value="valider" />
+                <input type="button" className="inpute" value="valider" onClick={askResult} />
               </div>
             </div>
           </div>
+          {paramsGame === "winner" ? <Win/> : null}
+          {paramsGame === "Looser" ? <Loose/> : null}
           <ReactPlayer
             playing={startBlindTest ? true : false}
             width="0px"

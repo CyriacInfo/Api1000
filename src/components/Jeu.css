@@ -41,6 +41,7 @@
 .info_jeu {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 80vw;
   height: 7vh;
   border-radius: 30px;
@@ -50,20 +51,22 @@
 }
 
 .timer {
-  width: 100px;
+  width: 400px;
+  font-size: 30px;
   height: 50px;
-  border: solid black 1px;
   margin: 10px 40px;
-  background-color: black;
   padding: auto;
-  color: white;
+  color: rgb(9, 141, 158);
 }
 
 .points {
-  width: 50px;
+  display: flex;
+  font-size: 30px;
+  width: 400px;
   height: 50px;
-  background-color: black;
   margin: 10px 40px;
+  color: rgb(9, 141, 158);
+  justify-content: flex-end;
 }
 
 .container_jeu {
@@ -89,5 +92,5 @@
 }
 
 .inpute {
-width: 3vw;
+  width: 3vw;
 }

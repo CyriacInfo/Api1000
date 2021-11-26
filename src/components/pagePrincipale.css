@@ -54,7 +54,7 @@ body {
     text-align: center;
     justify-content: center;
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
   .LogoMain {
@@ -83,6 +83,7 @@ body {
     text-shadow: 2px 2px 2px black;
     font-size: large;
   }
+
 }
 
 @media only screen and (min-width: 801px) {
@@ -140,7 +141,12 @@ body {
     text-shadow: 2px 2px 2px black;
     font-size: xx-large;
   }
+
+  .TextMain {
+    margin-left: 20px;
+  }
 }
+
 
 .BodyMain h1 {
   font-weight: 600;

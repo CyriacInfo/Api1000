@@ -4,14 +4,14 @@
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   margin: 20px 10vh;
 }
 .Titre_Style {
-  color: white;
-  text-shadow: 2px 2px 2px black;
+  color: #303030;
+  font-weight: 700;
+  margin-top: 4rem;
 }
-
 .section_Recherche_Style {
   display: flex;
   flex-wrap: wrap;
@@ -41,10 +41,6 @@
     margin: 5px 10px;
     background-color: white;
   }
-  .Titre_Style {
-    text-shadow: 2px 2px 2px black;
-    color: white;
-  }
 
   .section_Recherche_Style {
     width: auto;
@@ -57,9 +53,8 @@
     align-items: center;
     padding: 40px 20px;
     overflow: hidden;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     border-radius: 20px;
-    margin: 20px 0;
   }
   .Titre_Stylerecherche {
     display: flex;
@@ -67,7 +62,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     color: rgb(245, 245, 245);
     text-shadow: 20px rgb(192, 192, 192);
     margin: 20px;
@@ -93,9 +88,8 @@
     align-items: center;
     padding: 40px 20px;
     overflow: hidden;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     border-radius: 20px;
-    margin: 10px 0;
     padding: 0;
   }
   .Titre_Stylerecherche {
@@ -103,10 +97,10 @@
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
+    background-color: #f5f5f5;
     color: rgb(245, 245, 245);
     margin: 0;
   }
-
   .slide {
     width: 100%;
   }
